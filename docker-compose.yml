@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  panel:
+    build:
+      context: ./strawberry_analytics
+      dockerfile: Dockerfile
+    volumes:
+      - ./strawberry_analytics/staticfiles:/home/app/web/staticfiles:z
+    ports:
+      - 14567:14567
+    env_file:
+      - ./env.txt
