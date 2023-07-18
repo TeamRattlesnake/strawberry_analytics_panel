@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-bt&&s805@3l8z+ce9t%vuyltx!o%38rt3l%6n3kc#46g3$-t_4
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'strawberry-analytics.adefe.xyz']
 
 
 # Application definition
