@@ -13,9 +13,7 @@ from .service_rating_graph import generate_service_rating_graph, generate_servic
 # Create your views here.
 def index(request):
     print(request)
-    with open("little_static.html", "r") as f:
-        res = f.read()
-    return HttpResponse(res)
+    return render(request, 'graphs/index.html')
 
 
 def last_day(request):
