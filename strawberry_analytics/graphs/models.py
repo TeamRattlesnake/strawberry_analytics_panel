@@ -43,7 +43,7 @@ class GenerateResultInfo(BaseModel):
     rating: int
     date: int
     group_id: int
-    status: str
+    status: int
     gen_time: int
     platform: str
     published: int
