@@ -21,5 +21,5 @@ from graphs.views import index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('graphs/', include('graphs.urls')),
+    path('/', include('graphs.urls')),
 ]
