@@ -59,3 +59,5 @@ virtualenv==20.17.1
 virtualenv-clone==0.5.7
 webencodings==0.5.1
 zipp==3.11.0
+gunicorn
+pydantic
