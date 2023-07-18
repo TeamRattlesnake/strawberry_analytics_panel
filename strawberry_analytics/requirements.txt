@@ -61,3 +61,4 @@ webencodings==0.5.1
 zipp==3.11.0
 gunicorn
 pydantic
+sqlalchemy
