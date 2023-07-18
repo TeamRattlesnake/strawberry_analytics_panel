@@ -2,12 +2,12 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from PIL import Image
 
-from daily import generate_daily_analytics
-from daily_graph import generate_daily_graph
-from monthly import generate_monthly_analytics
-from monthly_graph import generate_monthly_graph
-from service_rating import generate_service_rating
-from service_rating_graph import generate_service_rating_graph
+from .daily import generate_daily_analytics
+from .daily_graph import generate_daily_graph
+from .monthly import generate_monthly_analytics
+from .monthly_graph import generate_monthly_graph
+from .service_rating import generate_service_rating
+from .service_rating_graph import generate_service_rating_graph
 
 
 # Create your views here.
