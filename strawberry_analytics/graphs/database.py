@@ -15,7 +15,7 @@ from sqlalchemy import (
     insert,
     func,
 )
-from models import GenerateResultInfo, GenerateMethodCount
+from .models import GenerateResultInfo, GenerateMethodCount
 
 
 class DBException(Exception):
