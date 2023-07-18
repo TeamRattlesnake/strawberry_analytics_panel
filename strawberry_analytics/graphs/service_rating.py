@@ -4,7 +4,7 @@ import pandas as pd
 from datetime import datetime
 
 from .database import Database
-from config import *
+from .config import *
 
 
 def generate_service_rating(output_dir="data/tmp"):
