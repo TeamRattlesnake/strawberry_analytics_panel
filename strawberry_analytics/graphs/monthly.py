@@ -2,8 +2,9 @@ import os
 import time
 
 from datetime import datetime
-from database import Database
-from config import *
+
+from .database import Database
+from .config import *
 
 
 def generate_monthly_analytics(output_dir="data/tmp"):

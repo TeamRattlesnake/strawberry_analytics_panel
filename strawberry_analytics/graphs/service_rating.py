@@ -2,7 +2,8 @@ import os
 import pandas as pd
 
 from datetime import datetime
-from database import Database
+
+from .database import Database
 from config import *
 
 

@@ -3,8 +3,9 @@ import time
 import pandas as pd
 
 from datetime import datetime
-from database import Database
-from config import *
+
+from .database import Database
+from .config import *
 
 
 def generate_daily_analytics(output_dir="data/tmp"):
