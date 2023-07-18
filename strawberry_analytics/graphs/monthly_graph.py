@@ -21,6 +21,7 @@ def generate_monthly_graph(input_dir="data/tmp", output_dir="data/results/monthl
     ax.bar(X, Y, color='maroon', width=0.6)
 
     fig.savefig(f"{output_dir}/{datetime.today().strftime('%d-%m-%Y')}.png")
+    return f"{output_dir}/{datetime.today().strftime('%d-%m-%Y')}.png"
 
 
 if __name__ == "__main__":
