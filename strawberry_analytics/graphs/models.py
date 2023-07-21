@@ -1,6 +1,3 @@
-from django.db import models
-
-# Create your models here.
 """
 Модуль с моделями
 """
@@ -21,18 +18,32 @@ class Score(int, Enum):
 class GenerateResultInfo(BaseModel):
     """
     Модель с информации об одном результате генерации.
+
     post_id - int, айди поста в базе данных. На фронтенде наверное не понадобится
+
     user_id : int, айди юзера, который сделал пост, тоже не понадобится
+
     method : str, название метода, которым сделан этот текст
+
     hint : str, затравка/тема поста, введенные пользователем для генерации
+
     text : str, сам текст, который сделала нейросеть
+
     rating : int, оценка поста, целое число (Задать посту оценку - см. /send_feedback)
+
     date : int, unix дата, когда был отправлен запрос
+
     group_id : int, айди группы, для которой сделан пост
+
     status : str, [READY, NOT_READY, ERROR] - описание статуса запроса
+
     gen_time : int - количество миллисекунд, затраченных на генерацию. date + gen_time = дата, когда генерация закончена
+
     platform : str - платформа, с которой отправлен запрос
+
     published : int - 0 - не опубликовано, 1 - опубликовано
+
+    hidden : int - 0 - виден, 1 - спрятан
     """
 
     post_id: int
@@ -43,10 +54,11 @@ class GenerateResultInfo(BaseModel):
     rating: int
     date: int
     group_id: int
-    status: int
+    status: str
     gen_time: int
     platform: str
     published: int
+    hidden: int
 
 
 class GenerateMethodCount(BaseModel):
@@ -56,4 +68,3 @@ class GenerateMethodCount(BaseModel):
 
     method: str
     cnt: int
-    

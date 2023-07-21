@@ -17,9 +17,11 @@ def generate_monthly_analytics(output_dir="data/tmp"):
     for item in a:
         if int(item.date) < month_ago:
             continue
-        days[(int(item.date)-int(month_ago)) // (60 * 60 * 24)][1] += 1
+        days[(int(item.date) - int(month_ago)) // (60 * 60 * 24)][1] += 1
 
-    with open(f"{output_dir}/monthly-{datetime.today().strftime('%d-%m-%Y')}", 'w') as f:
+    with open(
+        f"{output_dir}/monthly-{datetime.today().strftime('%d-%m-%Y')}", "w"
+    ) as f:
         for day in days:
             f.write(f"{day[0]};{day[1]}\n")
 

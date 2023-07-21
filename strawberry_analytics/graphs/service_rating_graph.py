@@ -4,7 +4,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 
-def generate_service_rating_graph(input_dir="data/tmp", output_dir="data/results/rating"):
+def generate_service_rating_graph(
+    input_dir="data/tmp", output_dir="data/results/rating"
+):
     os.makedirs(output_dir, exist_ok=True)
     fig = plt.figure()
     df = pd.read_csv(f"{input_dir}/service-rating.csv")
@@ -17,7 +19,9 @@ def generate_service_rating_graph(input_dir="data/tmp", output_dir="data/results
     return f"{output_dir}/rating.png"
 
 
-def generate_service_published_graph(input_dir="data/tmp", output_dir="data/results/published"):
+def generate_service_published_graph(
+    input_dir="data/tmp", output_dir="data/results/published"
+):
     os.makedirs(output_dir, exist_ok=True)
     fig = plt.figure()
     df = pd.read_csv(f"{input_dir}/service-published.csv")

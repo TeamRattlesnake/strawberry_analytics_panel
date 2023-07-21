@@ -20,9 +20,14 @@ def generate_daily_analytics(output_dir="data/tmp"):
         if int(item.date) >= yesterday:
             methods[item.method] = methods.get(item.method, 0) + 1
     df = pd.DataFrame(methods, index=[0])
-    df.to_csv(f"{output_dir}/daily-{datetime.today().strftime('%d-%m-%Y')}.csv", index=False)
+    df.to_csv(
+        f"{output_dir}/daily-{datetime.today().strftime('%d-%m-%Y')}.csv", index=False
+    )
     all_df = pd.DataFrame(all_methods, index=[0])
-    all_df.to_csv(f"{output_dir}/all-daily-{datetime.today().strftime('%d-%m-%Y')}.csv", index=False)
+    all_df.to_csv(
+        f"{output_dir}/all-daily-{datetime.today().strftime('%d-%m-%Y')}.csv",
+        index=False,
+    )
 
 
 if __name__ == "__main__":

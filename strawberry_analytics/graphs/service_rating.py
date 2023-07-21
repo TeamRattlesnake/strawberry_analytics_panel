@@ -17,7 +17,9 @@ def generate_service_rating(output_dir="data/tmp"):
     for item in a:
         methods_count[item.method] = methods_count.get(item.method, 0) + 1
         methods_rating[item.method] = methods_rating.get(item.method, 0.0) + item.rating
-        methods_published[item.method] = methods_published.get(item.method, 0.0) + item.published
+        methods_published[item.method] = (
+            methods_published.get(item.method, 0.0) + item.published
+        )
     for key in methods_rating:
         methods_rating[key] /= methods_count[key]
         methods_published[key] /= methods_count[key]
